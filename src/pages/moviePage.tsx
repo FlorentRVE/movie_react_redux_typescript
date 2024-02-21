@@ -1,21 +1,25 @@
+import { useParams } from "react-router-dom";
 import { useAppSelector } from "../app/hook";
 import Header from "../components/header";
 
-const HomePage = () => {
+const MoviePage = () => {
   const movieData = useAppSelector((state) => state.movieData.value);
+
+  let id : any = useParams().id;
+  let idNumber = parseInt(id);
+
+  function getMovie(id: number) {
+    return movieData.find((movie: any) => movie.id === id);
+  }
+  let movie = getMovie(idNumber);
 
   return (
     <div className="h-screen flex flex-col">
       <Header />
 
       <div className="flex-1 flex flex-col items-center bg-red-300">
-        <h1 className="text-3xl font-bold my-6">Movie DB</h1>
-
-        <div className="bg-slate-300 flex-1 w-[70%] flex flex-wrap justify-center items-center mb-6">
-          {movieData.map((movie: any) => {
-            return (
-              <a
-                href={`/movie/${movie.id}`}
+        <div className="bg-slate-300 flex-1 w-[70%] flex flex-wrap justify-center items-center my-6">
+              <div
                 className="w-1/3 bg-slate-800 p-4 m-4 text-slate-200 min-h-[400px] flex flex-col justify-center items-center"
               >
                 <div key={movie.id}>
@@ -31,13 +35,11 @@ const HomePage = () => {
                     {movie.vote_average}
                   </p>
                 </div>
-              </a>
-            );
-          })}
+              </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default HomePage;
+export default MoviePage;

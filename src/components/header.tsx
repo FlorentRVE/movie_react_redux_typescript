@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <div className="navbar bg-blue-300">
       <div className="flex-1">
-        <p className="text-xl text-red-500 font-bold bg-black py-2 px-4 rounded-2xl">
+        <a href="/" className="text-xl text-red-500 font-bold bg-black py-2 px-4 rounded-2xl">
           MDB
-        </p>
+        </a>
       </div>
 
       <div className="flex justify-between w-[300px] mx-6">
@@ -26,7 +26,6 @@ const Header = () => {
             placeholder="Search"
             className="input input-bordered w-24 md:w-auto"
             onChange={(e) => {
-              console.log(e.target.value);
               dispach(search(e.target.value));
             }}
           />

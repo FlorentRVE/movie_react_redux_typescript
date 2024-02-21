@@ -11,12 +11,13 @@ let data: any = await api.getData(searchTerms);
 const initialState: MovieDataState = {
   value: data["results"],
 };
+// ============================
 
 export const movieDataSlice = createSlice({
   name: "movieData",
   initialState,
   reducers: {
-     search: (state, action: PayloadAction<string>) => {
+    search: (state, action: PayloadAction<string>) => {
       let searchTerms: string = action.payload;
       async function getData() {
         data = await api.getData(searchTerms);
@@ -25,17 +26,22 @@ export const movieDataSlice = createSlice({
       state.value = data["results"];
     },
     triASC: (state) => {
-      state.value.sort((a: { vote_average: number; }, b: { vote_average: number; }) => a.vote_average - b.vote_average);
+      state.value.sort(
+        (a: { vote_average: number }, b: { vote_average: number }) =>
+          a.vote_average - b.vote_average
+      );
     },
     triDSC: (state) => {
-      state.value.sort((a: { vote_average: number; }, b: { vote_average: number; }) => b.vote_average - a.vote_average);
-    }
+      state.value.sort(
+        (a: { vote_average: number }, b: { vote_average: number }) =>
+          b.vote_average - a.vote_average
+      );
+    },
   },
 });
 
 export const { search, triASC, triDSC } = movieDataSlice.actions;
+export default movieDataSlice.reducer;
 
-// Other code such as selectors can use the imported `RootState` type
 export const selectMovieData = (state: RootState) => state.movieData.value;
 
-export default movieDataSlice.reducer;
