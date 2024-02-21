@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="h-screen flex flex-col">
       <Header />
 
-      <div className="flex-1 flex flex-col items-center bg-red-300">
+      <div className="flex-1 flex flex-col items-center bg-slate-300">
         <h1 className="text-3xl font-bold my-6">Movie DB</h1>
 
         <div className="bg-slate-300 flex-1 w-[70%] flex flex-wrap justify-center items-center mb-6">
@@ -27,7 +27,7 @@ const HomePage = () => {
                   <h1 className="font-bold text-xl text-center my-6">
                     {movie.title}
                   </h1>
-                  <p className="font-bold text-2xl text-yellow-400">
+                  <p className="font-bold text-2xl text-yellow-400 text-center">
                     {movie.vote_average}
                   </p>
                 </div>
