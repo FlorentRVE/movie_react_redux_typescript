@@ -17,12 +17,3 @@ export const getData = async (searchTerms: string) => {
 export const getGenre = async () => {
   return await fetch(API_GENRE_URL).then((response) => response.json());
 };
-
-// ============= TRI ===============
-// export function sortDataExploit(tri, data) {
-//   if (tri === "flop") {
-//     data.sort((a, b) => a.vote_average - b.vote_average);
-//   } else if (tri === "top") {
-//     data.sort((a, b) => b.vote_average - a.vote_average);
-//   }
-// }
