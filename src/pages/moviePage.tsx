@@ -7,11 +7,8 @@ const MoviePage = () => {
 
   let id : any = useParams().id;
   let idNumber = parseInt(id);
-
-  function getMovie(id: number) {
-    return movieData.find((movie: any) => movie.id === id);
-  }
-  let movie = getMovie(idNumber);
+  
+  const movie = movieData.find((movie: any) => movie.id === idNumber);
 
   return (
     <div className="h-screen flex flex-col">
