@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# MOVIEDB REDUX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TAILWINDCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TYPESCRIPT](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![MONGODB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![PRISMA](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Découverte de Redux via une application de film
 
-## Expanding the ESLint configuration
+## Sommaire
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Aperçu](#aperçu)
+  - [Le projet](#le-projet)
+  - [Screenshot](#screenshot)
+- [Méthode](#méthode)
+  - [Outils](#outils)
 
-- Configure the top-level `parserOptions` property like this:
+## Aperçu
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Le projet
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Les objectifs du projet :
+
+- Découvrir Redux
+
+### Screenshot
+
+![screenshot](/moviedb.png)
+
+
+## Méthode
+
+### Compétences acquises
+
+- Premiere approche de Redux
+
+### Outils
+
+- [Redux](https://redux.js.org/introduction/getting-started)
+- [React](https://fr.react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
